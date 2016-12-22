@@ -1,0 +1,190 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border: 6px solid black;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Niconne', cursive;
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+    padding-top: 2%;
+    color: rgb(212, 1, 1);
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px #000;
+}
+
+body>#user {
+    width: 25%;
+    box-sizing: border-box;
+    border-right: 2px solid black;
+}
+
+body>#display {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputs {
+    display: block;
+    max-width: 70%;
+    margin: 10% auto;
+    margin-bottom: 0;
+}
+
+.square {
+    display: block;
+    background-color: green;
+    width: 300px;
+    height: 300px;
+}
+
+.circle {
+    display: block;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    background-color: green;
+}
+
+input, label, select {
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+}
+
+input, select {
+    margin-bottom: 10%;
+    background-color: white;
+    padding: 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(212, 1, 1);
+}
+
+select {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+input[type=color] {
+    border: none;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+input[type=color], input[type=color]:focus {
+    border: none;
+}
+
+label {
+    font-weight: bold;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 2em;
+    }
+    body, #user {
+        display: block;
+    }
+    body>#user {
+        min-width: 100%;
+        border-right: none;
+    }
+    #inputs {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-width: 100%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    input, label, select {
+        margin-bottom: 2%;
+    }
+    input, select, option {
+        max-width: 12%;
+        font-size: 0.7em;
+    }
+    label {
+        margin-left: 2%;
+        margin-right: 0.5%;
+        display: inline-block;
+    }
+    #display {
+        display: flex;
+        min-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        box-shadow: none;
+        border-bottom: 1px solid black;
+    }
+    input[type=color] {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body, #user {
+        display: block;
+    }
+    body>#user {
+        min-width: 100%;
+        border-right: none;
+    }
+    #inputs {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-width: 100%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    input, label, select {
+        margin-bottom: 2%;
+    }
+    input {
+        max-width: 12%;
+    }
+    label {
+        margin-left: 2%;
+        margin-right: 0.5%;
+        display: inline-block;
+    }
+    #display {
+        display: flex;
+        min-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        box-shadow: none;
+        border-bottom: 1px solid black;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    label, input, select, option {
+        font-size: 0.75em;
+    }
+    input[type=color] {
+        font-size: 1em;
+    }
+}

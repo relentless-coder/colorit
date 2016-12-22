@@ -1,0 +1,44 @@
+<!Doctype html>
+<html data-ng-app>
+
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Niconne|Quicksand:400,700" rel="stylesheet">
+    <title>Colorit</title>
+</head>
+
+<body>
+    <div id="user">
+        <h1>Colorit</h1>
+        <div id="inputs">
+            <label for="shapes">Shape</label>
+            <select class="shapes" name="shapes" ng-model=shape value="square">
+            <option value="">Select Shape</option>
+            <option value="square">Square</option>
+            <option value="circle">Circle</option>
+          </select>
+            <label for="background-color">Background Color</label>
+            <input type="color" name="background-color" ng-model="background" value="#ffffff">
+            <label for="border-style">Border Style</label>
+            <input type="text" name="border-style" value="solid" ng-model=type placeholder="solid dashed dotted inset">
+            <label for="border-width">Border Width</label>
+            <input type="text" name="border-width" value="2px" ng-model=width placeholder="2px 4px 2px 4px">
+            <label for="border-color">Border Color</label>
+            <input type="color" name="border-color" ng-model=border value="#000000">
+            <label for="shadow">Box Shadow</label>
+            <input type="text" name="shadow" ng-model="shadow" value="5px 5px 10px" placeholder="5px 5px 10px">
+            <label for="shadow-color">Shadow Color</label>
+            <input type="color" ng-model=color name="shadow-color" value="#000">
+        </div>
+    </div>
+    <div id="display">
+        <div class="ng-class: {{shape}}" class="selectShape" ng-style="{'border-style': type, 'border-width': width,'border-color': border, 'background-color': background, 'box-shadow': shadow , color }">
+            &nbsp;
+        </div>
+    </div>
+</body>
+
+</html>
